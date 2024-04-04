@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Created from PDF via Acrobat SaveAsXML -->
+<!-- Mapping Table version: 28-February-2003 -->
+<TaggedPDF-doc>
+<?xpacket begin='﻿' id='W5M0MpCehiHzreSzNTczkc9d'?>
+<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 9.1-c001 79.675d0f7, 2023/06/11-19:21:16        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+            xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/">
+         <xmp:CreateDate>2024-03-09T12:36:23Z</xmp:CreateDate>
+         <xmp:CreatorTool>Chromium</xmp:CreatorTool>
+         <xmp:ModifyDate>2024-03-11T15:12:11-04:00</xmp:ModifyDate>
+         <xmp:MetadataDate>2024-03-11T15:12:11-04:00</xmp:MetadataDate>
+         <pdf:Producer>Skia/PDF m80</pdf:Producer>
+         <dc:format>xml</dc:format>
+         <xmpMM:DocumentID>uuid:0009ba76-bae0-fa4a-a56a-8faaab7522cf</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:99bbbda0-529d-44dc-b916-8def897ac4ab</xmpMM:InstanceID>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?>
+<?xpacket end='r'?>
+
+<Part>
+<H1>Travail pratique 1 - JavaScript - Syntaxe de base et affichage </H1>
+
+<Sect>
+<H3>Objectifs </H3>
+
+<P>Le but de ce travail pratique est de vous familiariser avec la syntaxe de base du JavaScript et de vous faire pratiquer l'affichage de contenu dans une page web. </P>
+
+<P>Les trois travaux de la session sont liés. Vous allez travailler sur le même projet pour les trois travaux. Vous allez créer un site web d'un produit ou un service de votre choix. Vous allez ajouter de l'interactivité à votre site web à chaque travail. </P>
+
+<P>Dans ce travail, vous allez afficher une liste de produits que vous pourrez trier et vous allez ajouter de l'interactivité pour afficher le détail d'un produit. </P>
+
+<P>Vous devez respecter la maquette en fil de fer fournie mais vous pouvez remplacer par le contenu de votre choix (texte, images, etc.). Bien que le style ne soit pas évalué, votre CSS doit être valide et respecter les bonnes pratiques en terme de lisibilité et de hiérarchie. </P>
+
+<P>Vous devez montrer l'avancement du projet à au moins une reprise. Je dois voir le code pour m'assurer que vous êtes sur la bonne voie. </P>
+
+<P>Tâches à réaliser </P>
+
+<Sect>
+<H5>Générer la navigation dynamiquement </H5>
+
+<L>
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_0.jpg"/>
+</Figure>
+
+<Lbl>Vous</Lbl>
+
+<LBody> devez créer un tableau contenant les liens de la navigation. Chaque lien doit contenir le texte à afficher et le nom de la page correspondante. Vous devez utiliser un objet pour chaque lien. </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_1.jpg"/>
+</Figure>
+
+<Lbl>Vous</Lbl>
+
+<LBody> devez générer les onglets de la navigation dynamiquement à partir du tableau. Les liens doivent être fonctionnels et mener à la page correspondante. </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_2.jpg"/>
+</Figure>
+
+<Lbl>Au</Lbl>
+
+<LBody> chargement de la page, le lien de la page courante doit être mis en évidence (ex: souligné, gras, couleur différente, etc.). L'objet Document contient l'information nécessaire pour faire cela. Faites une recherche et indiquez en commentaire la ressource que vous avez utilisée. </LBody>
+</LI>
+</L>
+
+<P>Mettez le code pour la navigation dans un fichier séparé que vous pourrez ajouter à chaque page. Ce n'est le plus optimal pour un site concret mais nous allons optimiser cela à la fin de la session. </P>
+
+<P>La balise nav doit être donc être vide dans le HTML. Vous devez générer le contenu de la balise nav à partir du JavaScript. </P>
+
+<P>Afficher la liste de produits </P>
+
+<L>
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_3.jpg"/>
+</Figure>
+
+<Lbl>Vous</Lbl>
+
+<LBody> devez afficher une liste d'éléments HTML à partir d'un tableau d'objets contenant les données des produits. (Maximum 5 produits) </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_4.jpg"/>
+</Figure>
+
+<Lbl>Vous</Lbl>
+
+<LBody> devez utiliser un objet pour chaque produit. Chaque objet doit contenir au moins 3 propriétés (ex: nom, prix, description, etc.). Ajoutez un id unique à chaque élément de la liste. Vous allez en avoir besoin pour la suite. </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_5.jpg"/>
+</Figure>
+
+<Lbl>Vous</Lbl>
+
+<LBody> devez créer vous-même un tableau pour regrouper les objets. Vous pouvez utiliser des données fictives. </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_6.jpg"/>
+</Figure>
+
+<Lbl>Utilisez</Lbl>
+
+<LBody> des images à partir de banques libres de droit comme 
+<Link>Unsplash</Link>
+ ou 
+<Link>Pexels</Link>
+. </LBody>
+</LI>
+</L>
+
+<P><Figure>
+
+<ImageData src="images/Tp1_img_7.jpg"/>
+</Figure>
+Renommez-vos images : nom-du-produit.jpg ou nom-du-produit.webp pour faciliter la programmation. </P>
+
+<L>
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_8.jpg"/>
+</Figure>
+
+<Lbl>Vous</Lbl>
+
+<LBody> devez générer le lien vers les images en concaténant le chemin vers le dossier assets/img/ avec le nom du produit et l'extension nécessaire. </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_9.jpg"/>
+</Figure>
+
+<Lbl>Lorsque</Lbl>
+
+<LBody> vous générez le contenu de la liste, passez le id à l'élément HTML qui aura un événement de clic. Vous allez en avoir besoin pour la suite. </LBody>
+</LI>
+</L>
+</Sect>
+
+<Sect>
+<H5>Afficher le détail d'un produit </H5>
+
+<L>
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_10.jpg"/>
+</Figure>
+
+<Lbl>Au</Lbl>
+
+<LBody> clic d'une vignette de la liste, vous devez afficher le détail dans la section aside. </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_11.jpg"/>
+</Figure>
+
+<Lbl>Utilisez</Lbl>
+
+<LBody> une fonction pour réaliser cette tâche. </LBody>
+</LI>
+</L>
+
+<P><Figure>
+
+<ImageData src="images/Tp1_img_12.jpg"/>
+</Figure>
+L'objet cliqué doit être mis en évidence (ex: souligné, gras, couleur différente, etc.). </P>
+</Sect>
+
+<Sect>
+<H5>Trier la liste de produits </H5>
+
+<P><Figure>
+
+<ImageData src="images/Tp1_img_13.jpg"/>
+</Figure>
+Vous devez permettre de trier et filtrer les éléments de la liste en cliquant sur des boutons. Vous devez pouvoir filtrer d'au moins trois façons (ex: alphabétique a-z, alphabetique z-a, par prix croissant, etc.) </P>
+
+<P><Figure>
+
+<ImageData src="images/Tp1_img_14.jpg"/>
+</Figure>
+Utilisez une seule fonction pour réaliser cette tâche. </P>
+
+<P><Figure>
+
+<ImageData src="images/Tp1_img_15.jpg"/>
+</Figure>
+N'utilisez pas de champs de formulaire pour cet exercice comme les boites à cocher ou les menus défilants </P>
+</Sect>
+</Sect>
+
+<Sect>
+<H3>Remise </H3>
+
+<P>Vous devez remettre votre travail dans un dossier .zip, nommé avec votre nom et prénom, sur Teams dans la section Devoirs. Assurez-vous que le dossier contient tous les fichiers nécessaires pour afficher la page dans un navigateur. Vous devez inclure les fichiers HTML, CSS, JavaScript et les images. </P>
+</Sect>
+
+<Sect>
+<H3>Critères d'évaluation - Compte pour 20% de la note finale Utilisation efficace des fonctions </H3>
+
+<P><Figure>
+
+<ImageData src="images/Tp1_img_16.jpg"/>
+</Figure>
+Les fonctions sont utilisées pour éviter la répétition de code Les fonctions sont efficacement utilisées </P>
+<Figure>
+
+<ImageData src="images/Tp1_img_17.jpg"/>
+</Figure>
+
+<L>
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_18.jpg"/>
+</Figure>
+
+<Lbl>Le</Lbl>
+
+<LBody> code contient une fonction init() qui est appelée au chargement de la page et qui appelle les autres fonctions </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_19.jpg"/>
+</Figure>
+
+<Lbl>Le</Lbl>
+
+<LBody> code contient une fonction pour chaque tâche </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_20.jpg"/>
+</Figure>
+
+<Lbl>Les</Lbl>
+
+<LBody> paramètres et les valeurs de retour des fonctions sont efficacement utilisés </LBody>
+</LI>
+</L>
+
+<P>Utilisation efficace des chaines de caractères </P>
+
+<L>
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_21.jpg"/>
+</Figure>
+
+<Lbl>Les</Lbl>
+
+<LBody> chaines de caractères sont utilisées pour afficher du contenu dans la page </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_22.jpg"/>
+</Figure>
+
+<Lbl>Au</Lbl>
+
+<LBody> moins 5 des méthodes suivantes de chaines de caractères sont utilisées: toUpperCase, toLowerCase, charAt, indexOf, lastIndexOf, substring, slice, split, replace, includes, startsWith, endsWith, trim, concat, padStart, padEnd </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_23.jpg"/>
+</Figure>
+
+<Lbl>Les</Lbl>
+
+<LBody> méthodes de chaines de caractères sont utilisées correctement et efficacement </LBody>
+</LI>
+</L>
+
+<P>Utilisation efficace des tableaux </P>
+
+<L>
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_24.jpg"/>
+</Figure>
+
+<Lbl>Les</Lbl>
+
+<LBody> tableaux sont utilisés pour regrouper plusieurs éléments de même type </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_25.jpg"/>
+</Figure>
+
+<Lbl>Au</Lbl>
+
+<LBody> moins 5 des méthodes suivantes de tableaux sont utilisées: push, pop, splice,sort,reverse,indexOf,forEach,filter,join,split </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_26.jpg"/>
+</Figure>
+
+<Lbl>Les</Lbl>
+
+<LBody> méthodes de tableaux sont utilisées correctement </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_27.jpg"/>
+</Figure>
+
+<Lbl>Il</Lbl>
+
+<LBody> est possible de filtrer et trier les éléments de la liste d'au moins 3 façons différentes </LBody>
+</LI>
+</L>
+
+<P>Utilisation efficace des objets </P>
+
+<L>
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_28.jpg"/>
+</Figure>
+
+<Lbl>Les</Lbl>
+
+<LBody> objets sont utilisés pour regrouper des unités de données </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_29.jpg"/>
+</Figure>
+
+<Lbl>Les</Lbl>
+
+<LBody> objets sont utilisés efficacement. </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_30.jpg"/>
+</Figure>
+
+<Lbl>Au</Lbl>
+
+<LBody> moins 1 des méthodes d'objets suivantes est utilisée: Object.keys, Object.values, Object.entries </LBody>
+</LI>
+</L>
+
+<P>Structure et qualité de code </P>
+
+<L>
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_31.jpg"/>
+</Figure>
+
+<Lbl>Le</Lbl>
+
+<LBody> code ne contient pas d'erreur </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_32.jpg"/>
+</Figure>
+
+<Lbl>Les</Lbl>
+
+<LBody> console.log() de débogage sont retirés ou commentés </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_33.jpg"/>
+</Figure>
+
+<Lbl>Les</Lbl>
+
+<LBody> variables sont nommées de façon explicite </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_34.jpg"/>
+</Figure>
+
+<Lbl>Les</Lbl>
+
+<LBody> noms de fonctions sont explicites </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_35.jpg"/>
+</Figure>
+
+<Lbl>Le</Lbl>
+
+<LBody> code est bien indenté </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_36.jpg"/>
+</Figure>
+
+<Lbl>Le</Lbl>
+
+<LBody> code est facile à lire </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_37.jpg"/>
+</Figure>
+
+<Lbl>Le</Lbl>
+
+<LBody> code est structuré de façon logique de façon à éviter la répétition </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_38.jpg"/>
+</Figure>
+
+<Lbl>Le</Lbl>
+
+<LBody> code est structuré pour éviter les erreurs d'ordre d'exécution </LBody>
+</LI>
+</L>
+
+<P>Autonomie et attitude professionnelle </P>
+
+<L>
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_39.jpg"/>
+</Figure>
+
+<Lbl>Les</Lbl>
+
+<LBody> éléments du devis sont présents </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_40.jpg"/>
+</Figure>
+
+<Lbl>Le</Lbl>
+
+<LBody> travail est remis à temps </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_41.jpg"/>
+</Figure>
+
+<Lbl>Les</Lbl>
+
+<LBody> références à du code externe sont bien documentées </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_42.jpg"/>
+</Figure>
+
+<Lbl>Le</Lbl>
+
+<LBody> code n'est pas copié-collé de sources externes ou de générateurs de code ou par intelligence artificielle </LBody>
+</LI>
+
+<LI><Figure>
+
+<ImageData src="images/Tp1_img_43.jpg"/>
+</Figure>
+
+<Lbl>Le</Lbl>
+
+<LBody> dossier de remise est bien nommé et complet. </LBody>
+</LI>
+</L>
+
+<P><Figure>
+
+<ImageData src="images/Tp1_img_44.jpg"/>
+</Figure>
+L'étudiant.e a montré l'avancement de son travail à son enseignant.e </P>
+</Sect>
+</Part>
+</TaggedPDF-doc>
