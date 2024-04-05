@@ -5,12 +5,8 @@ const liensMenu = [
       texte: "Accueil",
     },
     {
-      url: "a-propos.html",
+      url: "apropos.html",
       texte: "A propos",
-    },
-    {
-      url: "produits.html",
-      texte: "Produits",
     },
     {
       url: "contact.html",

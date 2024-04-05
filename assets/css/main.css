@@ -1,3 +1,5 @@
+@import url("./reset.css");
+
 * {
     margin: 0;
     padding: 0;
@@ -11,54 +13,76 @@ body {
     --beige: #f6f0e8;
     --beigeBG: #f6f0e841;
     --orange: #ff4f0d;
-    --pink: #ffbaff;
+    --pink: #f798c9;
     --yellow: #fcf533;
     --plum: #59002e;
-    --gray: #707070;   
-    
+    --gray: #707070;
 }
 
 p {
     font-family: "DM Sans", sans-serif;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
-    line-height: 1.3rem;
+    line-height: 1.2rem;
     max-width: 80ch;
     
 }
 
 h1 {
     font-family: "DM Sans", sans-serif;
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 100;
 }
 
 h2 {
     font-family: "DM Sans", sans-serif;
     font-size: 3rem;
-    font-weight: 200;
+    font-weight: 600;
 }
 
 h3 {
     font-family: "DM Sans", sans-serif;
-    font-size: 1.4rem;
-    line-height: 1.7rem;
+    font-size: 2.3rem;
+    line-height: 2.6rem;
     font-weight: 600;
 }
 
 h4 {
     font-family: "DM Sans", sans-serif;
-    font-size: 1.4rem;
-    line-height: 1.7rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
     font-weight: 600;
+}
+
+h5 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: 500;
     color: var(--indigo)
 }
 
 h6 {
     font-family: "DM Sans", sans-serif;
-    font-size: 0.7rem;
-    line-height: 0.7rem;
-    font-weight: 300;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    font-weight: 500;
+    color: var(--gray);
+}
+
+.prix-vedette {
+    font-family: "DM Sans", sans-serif;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    font-weight: 600;
+    color: var(--indigo)
+}
+
+.auteur {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 400;
     color: var(--gray);
 }
 
@@ -71,18 +95,19 @@ header {
     min-height: 100px;
 }
 
-.logo img{
-    max-width: 180px;
-}
-
 /* NAVIGATION */
+
+.logo {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
 
 nav {
     display: flex;
 }
 
-.liens-menu ul{
-    width: 100%;
+.menujs {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -90,7 +115,8 @@ nav {
     list-style: none;
     gap: 30px;
 }
-.liens-menu a{
+
+.menujs a{
     font-size: 1.1rem;
     font-weight: 600;
     color:var(--indigo);
@@ -98,7 +124,7 @@ nav {
     padding: 10px;
     text-decoration: none;
 }
-.liens-menu a:hover{
+.menujs a:hover{
     background-color:var(--indigo);
     color: white;
 }
@@ -107,16 +133,23 @@ nav {
 
 main
 {
-    margin: 0px 0px;
+    margin: auto;
     display: flex;
     flex-direction: row;
-    gap:30px;
+    justify-content: space-between;
+    min-height: 85vh;
 }
 
 .produits {
-    margin-left:30px;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin:30px 30px;
+}
+
+.titreDetails {
+    color: var(--plum);
+    margin-top: 30px;
+    margin-left: 30px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
 }
 
 .vedette {
@@ -124,10 +157,8 @@ main
     min-width: 95vh;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding: 20px;
+    gap: 20px;
     flex-wrap: wrap;
-    align-items: center;
 }
 
 .vedette .livre:hover{
@@ -136,11 +167,11 @@ main
 
 .livre-vedette {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
     justify-content: center;
-    margin: 20px;
-    margin: auto;
+    margin: 30px;
+    max-width: 80%;
 
 }
 
@@ -149,15 +180,17 @@ main
 }
 
 .info-vedette {
-    min-width: 40vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .liste-livres {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-top: 3rem;
-    gap: 30px;
+    margin-top: 20px;
+    gap: 10px;
     
 }
 
@@ -167,12 +200,13 @@ main
     justify-content: center;
     align-items: center;
     text-align: center;
-    flex-basis: 20%;
-    transition: all 100ms ease-in-out;
+    flex-basis: 15%;
+    padding: 15px;
+    gap: 2px;
 }
 
 .livre:hover {
-    color: var(--indigo);
+    color: var(--orange);
     font-weight: 800;
 }
 
@@ -180,6 +214,7 @@ main
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
+    padding-bottom: 9px;
 }
 
 .section-header {
@@ -207,14 +242,14 @@ main
     font-family: "DM Sans", sans-serif;
     font-size: 1rem;
     font-weight: 400;
-    background: var(--pink);
-    color: var(--plum);
+    background: var(--plum);
+    color: white;
     cursor: pointer;
 }
 
 .section-header .filtres .filtre:hover {
-    background-color: var(--plum);
-    color: white;
+    background-color: var(--pink);;
+    color: var(--plum);
 
 }
 
@@ -247,8 +282,8 @@ button:hover {
 }
 
 footer { 
-    background-color: var(--gray);
-    color: white;
+    background-color: var(--plum);
+    color: var(--pink);
     padding: 20px;
     font-size: 0.8rem;
 }
