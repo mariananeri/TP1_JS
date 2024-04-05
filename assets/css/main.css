@@ -136,7 +136,7 @@ main
 
 .livre-vedette {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
     justify-content: center;
     margin: 20px;
@@ -145,7 +145,7 @@ main
 }
 
 .livre-vedette img{
-    max-height: 60vh;
+    max-width: 50vh;
 }
 
 .info-vedette {

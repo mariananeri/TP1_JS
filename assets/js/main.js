@@ -2,20 +2,6 @@
 
 const livres = [
     {
-        isbn:9782714499806,
-        titre: "Obsolète",
-        auteur: "Sophie Loubière",
-        prix: 34.95,
-        description:"Auteur de huit romans, de nouvelles policières (notamment Les petits polars parus en version numérique chez 12/21) et d'un livre pour la jeunesse, Sophie Loubière s'est fait un nom dans le milieu de l'édition grâce à une émission littéraire unique en son genre (Parking de nuit, France Inter) et à ses chroniques à France Info (Info polar). Après L'Enfant aux Cailloux (Prix de la ville de Mauves-sur-Loire et Prix Lion d'or en 2012) Sophie Loubière nous invite dans son dernier roman Black Coffee à une exploration inédite de la mythique route 66 à travers l'histoire envoûtante d'une Française perdue dans l'immensité américaine...",
-    },
-    {
-        isbn:9781039006942,
-        titre: "The Afterpains",
-        auteur: "Anna Julia Stainsby",
-        prix: 20,
-        description:"Gorgeous and compelling, The Afterpains is a heartbreaking portrait of two families trying to cope with grief, isolation, and living far from one’s homeland—told in the voices of four distinct narrators.",
-    },
-    {
       isbn:9782070453603,
       titre: "Just Kids",
       auteur: "Patti Smith",
@@ -57,6 +43,22 @@ const livres = [
   prix: 12.95,
   description:"Lorem ipsum",
 },
+{
+  isbn:9782714499806,
+  titre: "Obsolète",
+  auteur: "Colleen Hoover",
+  prix: 12.95,
+  auteur: "Sophie Loubière",
+  prix: 34.95,
+  description:"Auteur de huit romans, de nouvelles policières (notamment Les petits polars parus en version numérique chez 12/21) et d'un livre pour la jeunesse, Sophie Loubière s'est fait un nom dans le milieu de l'édition grâce à une émission littéraire unique en son genre (Parking de nuit, France Inter) et à ses chroniques à France Info (Info polar). Après L'Enfant aux Cailloux (Prix de la ville de Mauves-sur-Loire et Prix Lion d'or en 2012) Sophie Loubière nous invite dans son dernier roman Black Coffee à une exploration inédite de la mythique route 66 à travers l'histoire envoûtante d'une Française perdue dans l'immensité américaine...",
+},
+{
+  isbn:9781039006942,
+  titre: "The Afterpains",
+  auteur: "Anna Julia Stainsby",
+  prix: 20,
+  description:"Gorgeous and compelling, The Afterpains is a heartbreaking portrait of two families trying to cope with grief, isolation, and living far from one’s homeland—told in the voices of four distinct narrators.",
+},
 ];
 
 //==== ELEMENTS HTML
@@ -65,6 +67,14 @@ const livreSelection = document.querySelector(".livre-vedette");
 const boutonTriAlphaCroissant = document.querySelector(".alpha.croissant");
 const boutonTriAlphaDecroissant = document.querySelector(".alpha.decroissant");
 const boutonFiltrePrix = document.querySelector(".filtre.prix");
+const imageVedetteHTML = document.querySelector(".cover-vedette");
+const titreVedetteHTML = document.querySelector(".titre");
+const auteurVedetteHTML = document.querySelector(".auteur");
+const prixVedetteHTML = document.querySelector(".prix-vedette");
+const descriptionVedetteHTML = document.querySelector(".description");
+const isbnVedetteHTML = document.querySelector(".isbn-vedette");
+
+
 
 //==== FUNCTIONS
 
@@ -103,7 +113,7 @@ function afficherLivres(tableauLivres) {
     const prix = livre.prix;
     //Afficher dans la console
     const template = `
-      <div class="livre">
+      <div class="livre" id="${isbn}">
         <img src="assets/img/livres/${isbn}.jpeg">
         <h3>${titre}</h3>
         <h6>${auteur}</h6>
@@ -120,23 +130,33 @@ function afficherLivres(tableauLivres) {
 
 function onClicBoite(evenement) {
   const declencheur = evenement.currentTarget;
+  console.log(declencheur);
+  const id = declencheur.id;
+  const livreClic = trouverLivre(id);
+  // On cherche tous les éléments avec la classe livre
+  const livres = document.querySelectorAll(".livre")
+  livres.forEach(function(element){
+    element.style.backgroundColor="";
+  })
+  //Pour chaque on enlève le style.
   declencheur.style.backgroundColor = "beige";
-  const visbn = declencheur.isbn;
-  const vtitre = declencheur.titre;
-  const vauteur = declencheur.auteur;
-  const vprix = declencheur.prix;
-  const templateVedette = `
-      <div class="vedette">
-      <h1>Livre sélectionné</h1>
-        <img src="assets/img/livres/${visbn}.jpeg"
-        <h2>${vtitre}</h2>
-        <p>${vauteur}</p>
-        <p>$${vprix}</p>
-      </div> 
-      `;
+  //rechercher dans la liste l'élément avec le id
+  const objet = trouverLivre(id);
+  const isbnVedette = objet.isbn;
+  const titreVedette = objet.titre;
+  const auteurVedette = objet.auteur;
+  const prixVedette = objet.prix;
+  const descriptionVedette = objet.description;
 
+  //Afficher dans la zone, les valeurs de l,objet trouvé
+  imageVedetteHTML.src=`assets/img/livres/${isbnVedette}.jpeg`;
+  titreVedetteHTML.textContent=titreVedette;
+  auteurVedetteHTML.textContent=auteurVedette;
+  prixVedetteHTML.textContent="$"+prixVedette;
+  descriptionVedetteHTML.textContent=descriptionVedette;
   //affichage du livre vedette
-  livreSelection.insertAdjacentHTML("beforeend", templateVedette);
+  
+
 }
 
 
