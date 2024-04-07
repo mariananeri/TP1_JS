@@ -17,7 +17,7 @@ const liensMenu = [
   //==== ELEMENTS HTML
 
   const listeLiensHTML = document.querySelector(".menujs");
-console.log(listeLiensHTML)
+  
   //==== FONCTIONS
 
   function init() {
@@ -41,13 +41,6 @@ function injecterLienHTML(tableauLiens) {
 }
 }
 
+
   //==== EXECUTION CODE
 init();
-
-/* =============================================
-RESEARCH - DELETE
-
-
-
-
-*/
