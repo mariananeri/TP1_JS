@@ -21,12 +21,12 @@ Vous devez montrer l'avancement du projet à au moins une reprise. Je dois voir 
 
 **Générer la navigation dynamiquement**
 
-- Vous devez créer un tableau contenant les liens de la navigation. Chaque lien doit contenir le texte à
+    - Vous devez créer un tableau contenant les liens de la navigation. Chaque lien doit contenir le texte à
 afficher et le nom de la page correspondante. Vous devez utiliser un objet pour chaque lien.
 
-- Vous devez générer les onglets de la navigation dynamiquement à partir du tableau. Les liens doivent être fonctionnels et mener à la page correspondante.
+    - Vous devez générer les onglets de la navigation dynamiquement à partir du tableau. Les liens doivent être fonctionnels et mener à la page correspondante.
 
-- Au chargement de la page, le lien de la page courante doit être mis en évidence (ex: souligné, gras, couleur différente, etc.). L'objet Document contient l'information nécessaire pour faire cela. Faites une recherche et indiquez en commentaire la ressource que vous avez utilisée.
+    - Au chargement de la page, le lien de la page courante doit être mis en évidence (ex: souligné, gras, couleur différente, etc.). L'objet Document contient l'information nécessaire pour faire cela. Faites une recherche et indiquez en commentaire la ressource que vous avez utilisée.
 
 
 Mettez le code pour la navigation dans un fichier séparé que vous pourrez ajouter à chaque page. Ce n'est le plus optimal pour un site concret mais nous allons optimiser cela à la fin de la session.
